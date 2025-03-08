@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy - Pet Adoption</title>
+    <!-- talwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- css link -->
+     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00a884',
+                        secondary: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-paw text-primary text-xl mr-2"></i>
+                <span class="text-primary font-bold text-xl">Paddy</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-800 hover:text-primary">Home</a>
+                <a href="#" class="text-gray-800 hover:text-primary">Shop</a>
+                <a href="#" class="text-gray-800 hover:text-primary">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4  ">
+                <button class="text-gray-600 hover:text-primary">
+                    <img class="hidden md:block lg:block" src="/assest/icon.svg" alt="">
+                </button>
+                <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                    <i class="fas  fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#" class="block text-gray-800 hover:text-primary py-2">Home</a>
+                <a href="#" class="block text-gray-800 hover:text-primary py-2">Shop</a>
+                <a href="#" class="block text-gray-800 hover:text-primary py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-50 py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6">
+                <span class="inline-block bg-orange-100 text-orange-500 rounded-full px-4 py-1 text-sm font-semibold mb-4">
+                    Bringing Families Together ❤️
+                </span>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Your Path to Adoption<br>Starts Here</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                    It's a life-changing decision to find a perfect pet for your home. Let us help you find the right companion for your family.
+                </p>
+                <button class="bg-accent hover:bg-primary/90 text-black font-semibold py-3 px-6 rounded-md transition">
+                   View More
+                </button>
+                <div class="flex justify-center py-8">
+                    <img src="./assest/pet.webp" alt="Dog and cat together" class="max-w-full h-auto rounded-lg" style="max-height: 500px; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption Section -->
+     <section class="max-w-6xl mx-auto py-12 px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Adopt Your Best Friend</h2>
+        <p class="text-center text-gray-600 mb-8">It is a long established fact that a reader will be distracted...</p>
+        
+        <!-- Pet Categories Tabs -->
+        <div class="flex flex-col lg:flex-row justify-center gap-4 mb-8">
+            <button class="bg-white border px-6 py-3 rounded-full flex items-center shadow">
+                <span class="mr-2">🐶</span> Dogs
+            </button>
+            <button class="bg-green-100 text-green-700 px-6 py-3 rounded-full flex items-center shadow">
+                <span class="mr-2">🐱</span> Cats
+            </button>
+            <button class="bg-white border px-6 py-3 rounded-full flex items-center shadow">
+                <span class="mr-2">🐰</span> Rabbits
+            </button>
+            <button class="bg-white border px-6 py-3 rounded-full flex items-center shadow">
+                <span class="mr-2">🐦</span> Birds
+            </button>
+        </div>
+        
+        <!-- Best Deal & Sort Button -->
+        <div class="flex flex-col lg:flex-row justify-between items-center py-4">
+            <h3 class="text-xl font-semibold mb-3 lg:mb-0">Best Deal For You</h3>
+            <button class="btn btn-success text-white px-4 py-2 rounded-lg shadow">Sort by Price</button>
+        </div>
+        
+        <!-- Pet Cards Grid -->
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"> -->
+            <div  class="flex flex-col lg:flex-row  gap-4 justify-between">
+            <!-- Pet Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
+                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
+                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
+                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
+                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
+                <p class="text-gray-600 text-sm">💲Price: 199$</p>
+                <div class="flex flex-col lg:flex-row gap-2 mt-4">
+                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
+                </div>
+            </div>
+            
+            <!-- Pet Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
+                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
+                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
+                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
+                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
+                <p class="text-gray-600 text-sm">💲Price: 199$</p>
+                <div class="flex flex-col lg:flex-row gap-2 mt-4">
+                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
+                </div>
+            </div>
+            
+             <!-- Pet Card 3 -->
+             <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
+                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
+                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
+                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
+                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
+                <p class="text-gray-600 text-sm">💲Price: 199$</p>
+                <div class="flex flex-col lg:flex-row gap-2 mt-4">
+                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
+                </div>
+            </div>
+            <!-- Pet Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
+                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
+                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
+                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
+                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
+                <p class="text-gray-600 text-sm">💲Price: 199$</p>
+                <div class="flex flex-col lg:flex-row gap-2 mt-4">
+                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
+                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
+                </div>
+            </div>
+            
+            <!-- Right Side Grid (Image Gallery) -->
+            <div class="flex-1 grid grid-cols-2 gap-2">
+                <h1>ggggg</h1>
+                <img src="https://via.placeholder.com/100" class="rounded-lg">
+                <img src="https://via.placeholder.com/100" class="rounded-lg">
+                <img src="https://via.placeholder.com/100" class="rounded-lg">
+                <img src="https://via.placeholder.com/100" class="rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row justify-between">
+                <!-- Logo and Info -->
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-paw text-primary text-xl mr-2"></i>
+                        <span class="text-white font-bold text-xl">Paddy</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-xs">
+                        Animal Shelter | Open 9 AM to 5 PM Daily
+                    </p>
+                    <p class="text-gray-400 mb-4">
+                        123 Pet Street, Animal City<br>
+                        contact@paddy.com<br>
+                        (123) 456-7890
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-semibold mb-4">Useful Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-primary">Home</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-primary">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-primary">Animals</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-primary">Foundation</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-white font-semibold mb-4">Drop a Message</h4>
+                       
+                        <div class="flex flex-col gap-5">
+                            <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-primary">
+                            <button class="bg-success hover:bg-primary/90 text-white px-4 py-2 rounded-r-md">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+                &copy; 2023 Paddy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
