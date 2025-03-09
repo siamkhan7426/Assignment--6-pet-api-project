@@ -102,78 +102,65 @@
             <h3 class="text-xl font-semibold mb-3 lg:mb-0">Best Deal For You</h3>
             <button class="btn btn-success text-white px-4 py-2 rounded-lg shadow">Sort by Price</button>
         </div>
+        <!-- pet card -->
+            <div class="container mx-auto px-4">
+                <!-- Header Section -->
+                
+                <!-- Flex Layout (Gallery on Right, Cards on Left) -->
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <!-- Left Side: Pet Cards -->
+                    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- Pet Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden p-4">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Golden Retriever" class="w-full h-48 object-cover mb-3">
+                            <h4 class="font-semibold mb-2">Mister Tartosh</h4>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <p>🐾 Breed: Golden Retriever</p>
+                                <p>📅 Birth: 2024</p>
+                                <p>♀ Gender: Female</p>
+                                <p>💰 Price: $199</p>
+                            </div>
+                            <hr>
+                            <div class="flex justify-end gap-2 mt-3">
+                                <button class="border rounded-lg py-1 px-3 flex items-center hover:bg-gray-100">👍 Like</button>
+                                <button class="border rounded-lg py-1 px-3 text-green-500 hover:bg-green-100">Adopt</button>
+                                <button class="border rounded-lg py-1 px-3 text-blue-500 hover:bg-blue-100">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Pet Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden p-4">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Golden Retriever" class="w-full h-48 object-cover mb-3">
+                            <h4 class="font-semibold mb-2">Charlie</h4>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <p>🐾 Breed: Golden Retriever</p>
+                                <p>📅 Birth: 2024</p>
+                                <p>♀ Gender: Female</p>
+                                <p>💰 Price: $199</p>
+                            </div>
+                            <hr>
+                            <div class="flex justify-end gap-2 mt-3">
+                                <button class="border rounded-lg py-1 px-3 flex items-center hover:bg-gray-100">👍 Like</button>
+                                <button class="border rounded-lg py-1 px-3 text-green-500 hover:bg-green-100">Adopt</button>
+                                <button class="border rounded-lg py-1 px-3 text-blue-500 hover:bg-blue-100">Details</button>
+                            </div>
+                        </div>
+                    </div>
         
-        <!-- Pet Cards Grid -->
-        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"> -->
-            <div  class="flex flex-col lg:flex-row  gap-4 justify-between">
-            <!-- Pet Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
-                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
-                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
-                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
-                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
-                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
-                <p class="text-gray-600 text-sm">💲Price: 199$</p>
-                <div class="flex flex-col lg:flex-row gap-2 mt-4">
-                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
+                    <!-- Right Side: Gallery (Fixed Width) -->
+                    <div id="right-side" class="w-1/4 hidden lg:block">
+                        <div class="grid grid-cols-2 gap-2">
+                            <img src="/placeholder.svg?height=80&width=80" class="rounded-lg shadow-md">
+                            <img src="/placeholder.svg?height=80&width=80" class="rounded-lg shadow-md">
+                            <img src="/placeholder.svg?height=80&width=80" class="rounded-lg shadow-md">
+                            <img src="/placeholder.svg?height=80&width=80" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Pet Card 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
-                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
-                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
-                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
-                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
-                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
-                <p class="text-gray-600 text-sm">💲Price: 199$</p>
-                <div class="flex flex-col lg:flex-row gap-2 mt-4">
-                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
-                </div>
-            </div>
-            
-             <!-- Pet Card 3 -->
-             <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
-                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
-                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
-                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
-                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
-                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
-                <p class="text-gray-600 text-sm">💲Price: 199$</p>
-                <div class="flex flex-col lg:flex-row gap-2 mt-4">
-                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
-                </div>
-            </div>
-            <!-- Pet Card 4 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
-                <img src="https://via.placeholder.com/300" alt="Pet" class="w-full h-48 object-cover rounded-lg">
-                <h4 class="font-semibold mt-4">Mister Tartosh</h4>
-                <p class="text-gray-600 text-sm">🐾 Breed: Golden Retriever</p>
-                <p class="text-gray-600 text-sm">📅 Birth: 2024</p>
-                <p class="text-gray-600 text-sm">♀ Gender: Female</p>
-                <p class="text-gray-600 text-sm">💲Price: 199$</p>
-                <div class="flex flex-col lg:flex-row gap-2 mt-4">
-                    <span class="rounded-lg border py-2 px-5"><i class="fa-regular fa-thumbs-up"></i></span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Adopt</span>
-                    <span class="border text-primary px-4 py-2 rounded-lg">Details</span>
-                </div>
-            </div>
-            
-            <!-- Right Side Grid (Image Gallery) -->
-            <div class="flex-1 grid grid-cols-2 gap-2">
-                <h1>ggggg</h1>
-                <img src="https://via.placeholder.com/100" class="rounded-lg">
-                <img src="https://via.placeholder.com/100" class="rounded-lg">
-                <img src="https://via.placeholder.com/100" class="rounded-lg">
-                <img src="https://via.placeholder.com/100" class="rounded-lg">
-            </div>
-        </div>
+        
+        
+        
     </section>
 
     <!-- Footer -->
@@ -231,14 +218,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        // const mobileMenuButton = document.getElementById('mobile-menu-button');
-        // const mobileMenu = document.getElementById('mobile-menu');
-        
-        // mobileMenuButton.addEventListener('click', () => {
-        //     mobileMenu.classList.toggle('hidden');
-        // });
-    </script>
+    <script src="/js/index.js"></script>
+    <script src="/js/display.js"></script>
 </body>
 </html>
