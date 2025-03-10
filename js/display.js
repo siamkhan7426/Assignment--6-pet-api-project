@@ -2,6 +2,25 @@
 
 const displyAllData = (allPetsCard) => {
   const cardContainer = document.querySelector("#petCard-container");
+ cardContainer.innerHTML =" "
+  if(allPetsCard ==0){
+    cardContainer.classList.remove("grid");
+  cardContainer.innerHTML = `
+ <div class="space-y-4 flex flex-col justify-center mx-auto  min-h-80 items-center">
+  <img src="./assest/Group.jpg" class=" shadow-md">
+ <div class="space-y-4">
+ </div>
+  <h2 class="text-center text-2xl font-bold">No Information Available</h2>
+  <p class="text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
+its layout. The point of using Lorem Ipsum is that it has a.</p>
+ </div>
+  
+  `;
+  return;
+  
+  }else{
+    cardContainer.classList.add("grid")
+  };
   allPetsCard.forEach((card) => {
     const {image, breed, date_of_birth, price, gender, pet_details, pet_name} = card;
     const div = document.createElement("div");
@@ -37,14 +56,16 @@ const dynamicPetBtDataShow = (petBtn)=>{
   
   petBtn.forEach((petBtn) => {
     const {id, category, category_icon} = petBtn;
+    //console.log(category)
     const div = document.createElement("div");
     div.innerHTML = `
-    <button id="btn-"onclick = "" class=" bg-white cursor-pointer border px-8 py-3  flex gap-2 items-center justify-center text-center shadow">
+    <button id="btn-" onclick='loadCatagoryBtnId("${category}")' class=" bg-white cursor-pointer border px-8 py-3  flex gap-2 items-center justify-center text-center shadow">
                ${category}<img class="w-14 h-12 category-btn" src="${category_icon}" alt="">
             </button>
     
     `
     buttonContainer.appendChild(div);
     
-  })
-}
+  });
+};
+// ------------------ dynamic pet button show all api call function end ------------
