@@ -10,3 +10,8 @@
    
     color: #0E7A81;
 }
+.active{
+    border-radius: 25%;
+    background-color: #0E7A811A;
+    color: black;
+}
