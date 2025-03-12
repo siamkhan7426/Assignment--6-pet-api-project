@@ -15,6 +15,8 @@
      }
     }
 
+    // imge function dynamic
+    
 
 // ------------------------- Api Call Function -----------------------------
 // ----------------all card data API call function star ---------------

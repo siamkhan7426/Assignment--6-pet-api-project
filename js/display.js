@@ -36,18 +36,35 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                         </div>
                         <hr>
                         <div class="flex flex-col lg:flex-row justify-end gap-2 mt-3">
-                            <button id="likeBtn" class="border rounded-lg py-1 px-3 flex items-center hover:bg-gray-100">👍 Like</button>
+                            <button id="likeBtn" class="like-btn border rounded-lg py-1 px-3 flex items-center hover:bg-gray-100">👍 Like</button>
                             <button id="adoptBtn" class="border rounded-lg py-1 px-3 text-green-500 hover:bg-green-100">Adopt</button>
                             <button id="detailsBtn" class="border rounded-lg py-1 px-3 text-blue-500 hover:bg-blue-100">Details</button>
                         </div>
                     </div>
         `;
-
     cardContainer.appendChild(div);
+    // -----------dynamic vaba card button dora addEventListener () image show
+    const likeButton = div.querySelector(".like-btn");
+    likeButton.addEventListener("click", (event)=>{
+      event.stopPropagation();
+      rightSideImgeFunction(image);
+    });
   });
 };
+//  --------------------------------------dynamic vaba imge load function star-------------
 
-//  --------------- api all data dsiply all pets card show end -----------------
+const rightSideImgeFunction = (imgsrc)=>{
+    const rightSideGrid = document.querySelector("#right-side-grid");
+    const imgContainer = document.createElement("img");
+    imgContainer.src = imgsrc;
+    imgContainer.classList.add("w-full", "h-24", "object-cover", "rounded-lg", "shadow-md");
+    rightSideGrid.appendChild(imgContainer);
+    
+};
+//  --------------------------------------dynamic vaba imge load end-------------
+
+//  --------------- api all data dsiply all pets card show end --------------------
+
 
 // ------------------ dynamic pet button show all api call function star ------------
 
