@@ -56,10 +56,8 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
   const showModalFunction = (petDetails)=>{
     const modalContainer = document.querySelector("#modal-container");
     const {image, pet_name, breed, gender, price, pet_details, date_of_birth}=petDetails
-    const div = document.createElement("div")
-    div.classList.add("space-y-4")
-    div.innerHTML = `
-    <img src="${image}" alt="Golden Retriever" class="w-full h-48 object-cover mb-3 rounded-lg">
+    modalContainer.innerHTML = `
+    <img src="${image}" alt="Golden Retriever" class="w-full h-auto object-cover mb-3 rounded-lg">
     <h1 class="text-2xl font-bold py-2">${pet_name}</h1>
     <p>🐾 Breed: ${breed ? breed : "N/A Breed"}</p>
     <p>📅 Birth: ${date_of_birth ? date_of_birth : "N/A Birth"}</p>
@@ -68,7 +66,6 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
     <h1 class="text-2xl  font-extrabold">Details Information</h1>
     <p class="mb-3">${pet_details}</p>
     `
-  modalContainer.appendChild(div)
     // modal open
     document.querySelector("#showModal").click()
   }
