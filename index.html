@@ -110,11 +110,27 @@
                 <div id="right-side" class="border w-1/4 h-2/3 hidden lg:block">
                     <div id="right-side-grid" class="grid grid-cols-2 gap-2">
                         
-                        
                     </div>
                 </div>
             </div>
     </section>
+    <!-- modal show star -->
+        <!-- Open the modal using ID.showModal() method -->
+<button id="showModal" class="btn hidden " onclick="customModal.showModal()">open modal</button>
+<dialog  id="customModal" class="modal ">
+  <div class="modal-box">
+    <div id="modal-container">
+
+    </div>
+    <div class="space-y-3">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class=" w-full btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    <!-- modal show end -->
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white">

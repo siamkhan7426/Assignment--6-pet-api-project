@@ -50,7 +50,7 @@ const loadCatagoryBtn = async () =>{
 loadCatagoryBtn();
 // .....................................dynamic button api data call end -------------------------
 
-// ------------------------------------ dynamic button id call function star ----------------------
+// ------------------------------------ dynamic button catagory call function star ----------------------
 
 const loadCatagoryBtnId = async (catagoryDetails) =>{
   
@@ -65,6 +65,20 @@ const loadCatagoryBtnId = async (catagoryDetails) =>{
   //  }
     displyAllData(data?.data);
   }
+ }catch(error){
+  console.log("Error: " + error.message);
+ };
+};
+// ------------------------------------ dynamic button catagory call function end ----------------------
+
+//------------------------------------ dynamic pet id function call star----------------------------------
+
+const loadPetIdFunction = async (petId)=>{
+ try{
+  const responsives = await fetch (`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
+  const data = await responsives.json();
+  showModalFunction(data.petData);
+  
  }catch(error){
   console.log("Error: " + error.message);
  };
