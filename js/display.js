@@ -26,7 +26,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
     const div = document.createElement("div");
     div.innerHTML = `
     <div class="bg-white rounded-lg shadow-md overflow-hidden p-4">
-                        <img src="${image}?height=200&width=300" alt="Golden Retriever" class="w-full h-48 object-cover mb-3">
+                        <img src="${image}?lg:height=200&width=300" alt="Golden Retriever" class="w-full h-auto lg:h-48 object-cover mb-3">
                         <h4 class="font-semibold mb-2">${pet_name ? pet_name : "N/A Pet Name"}</h4>
                         <div class="text-sm text-gray-600 mb-3">
                             <p>🐾 Breed: ${breed ? breed : "N/A Breed"}</p>
@@ -52,7 +52,8 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
   });
 };
   // --------------------dynamic vaba card button dora addEventListener () image show end -----------------
-  // --------------------modal function call{}------------------------------------
+
+  // --------------------modal function call{} star------------------------------------
   const showModalFunction = (petDetails)=>{
     const modalContainer = document.querySelector("#modal-container");
     const {image, pet_name, breed, gender, price, pet_details, date_of_birth}=petDetails
@@ -67,9 +68,9 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
     <p class="mb-3">${pet_details}</p>
     `
     // modal open
-    document.querySelector("#showModal").click()
-  }
-
+    document.querySelector("#showModal").click();
+  };
+// --------------------modal function call{} end------------------------------------
 
 //  --------------------------------------dynamic vaba imge load function star-------------
 const rightSideImgeFunction = (imgsrc)=>{
