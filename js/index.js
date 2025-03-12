@@ -1,3 +1,5 @@
+//------------------------------js function ------ 
+
 // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -5,7 +7,13 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-    
+    // ---------------------active button color remove function--------
+    const reoveClassBtn = (id)=>{
+      const activeBtns = document.getElementsByClassName("category-btn");
+     for (const btnActive of activeBtns) {
+      btnActive.classList.remove("active")
+     }
+    }
 
 
 // ------------------------- Api Call Function -----------------------------
@@ -43,11 +51,18 @@ loadCatagoryBtn();
 // ------------------------------------ dynamic button id call function star ----------------------
 
 const loadCatagoryBtnId = async (catagoryDetails) =>{
-  console.log(catagoryDetails);
+  
  try{
   const respon = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${catagoryDetails}`);
-  const data = await respon.json();
-  displyAllData(data?.data);
+  const data = await respon.json();{
+    reoveClassBtn()
+    const activeBtn = document.getElementById(`btn-${catagoryDetails}`);
+    activeBtn.classList.add("active")
+  //  for (const btnActives of activeBtn) {
+  //   console.log(btnActives)
+  //  }
+    displyAllData(data?.data);
+  }
  }catch(error){
   console.log("Error: " + error.message);
  };

@@ -56,16 +56,16 @@ const dynamicPetBtDataShow = (petBtn)=>{
   
   petBtn.forEach((petBtn) => {
     const {id, category, category_icon} = petBtn;
-    //console.log(category)
     const div = document.createElement("div");
     div.innerHTML = `
-    <button id="btn-" onclick='loadCatagoryBtnId("${category}")' class=" bg-white cursor-pointer border px-8 py-3  flex gap-2 items-center justify-center text-center shadow">
-               ${category}<img class="w-14 h-12 category-btn" src="${category_icon}" alt="">
+    <button id="btn-${category}" onclick='loadCatagoryBtnId("${category}")' class=" category-btn bg-white cursor-pointer border px-8 py-3  flex gap-2 items-center justify-center text-center shadow">
+               ${category}<img class="w-14 h-12 " src="${category_icon}" alt="">
             </button>
     
     `
     buttonContainer.appendChild(div);
     
   });
+ 
 };
 // ------------------ dynamic pet button show all api call function end ------------
