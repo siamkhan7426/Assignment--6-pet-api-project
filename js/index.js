@@ -53,7 +53,7 @@ const loadCatagoryBtnId = async (catagoryDetails) =>{
   const spinner = document.getElementById("load-spinner"); // স্পিনার ধরছি
   const cardContainer = document.querySelector("#petCard-container");
   cardContainer.innerHTML =" "
-  spinner.classList.remove("hidden"); // স্পিনার শো করানো
+  spinner.classList.remove("hidden"); 
   setTimeout(async()=>{
     try{
       const respon = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${catagoryDetails}`);
@@ -65,9 +65,9 @@ const loadCatagoryBtnId = async (catagoryDetails) =>{
       }
      }catch(error){
       console.log("Error: " + error.message);
-     }finally {
-      spinner.classList.add("hidden"); // স্পিনার বন্ধ করে দেওয়া
-  }
+     }
+      spinner.classList.add("hidden"); 
+  
   }, 2000);
 };
 
