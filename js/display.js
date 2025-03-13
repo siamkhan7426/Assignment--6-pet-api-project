@@ -43,6 +43,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                     </div>
         `;
     cardContainer.appendChild(div);
+
     // -----------dynamic vaba card button dora addEventListener () image show star--------------
     const likeButton = div.querySelector(".like-btn");
     likeButton.addEventListener("click", (event)=>{
@@ -75,10 +76,12 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
 //  --------------------------------------dynamic vaba imge load function star-------------
 const rightSideImgeFunction = (imgsrc)=>{
     const rightSideGrid = document.querySelector("#right-side-grid");
+    
     const imgContainer = document.createElement("img");
     imgContainer.src = imgsrc;
     imgContainer.classList.add("w-full", "h-24", "object-cover", "rounded-lg", "shadow-md");
     rightSideGrid.appendChild(imgContainer);
+    
     
 };
 //  --------------------------------------dynamic vaba imge load end-------------
@@ -92,7 +95,7 @@ const dynamicPetBtDataShow = (petBtn)=>{
   const buttonContainer = document.querySelector("#btn-container");
   
   petBtn.forEach((petBtn) => {
-    const {id, category, category_icon} = petBtn;
+    const {category, category_icon} = petBtn;
     const div = document.createElement("div");
     div.innerHTML = `
     <button id="btn-${category}" onclick='loadCatagoryBtnId("${category}")' class=" category-btn bg-white cursor-pointer border px-8 py-3  flex gap-2 items-center justify-center text-center shadow">
@@ -100,6 +103,8 @@ const dynamicPetBtDataShow = (petBtn)=>{
             </button>
     
     `
+    // button event add dynbamic vaba 
+    const button = div.querySelector("click", ()=>loadCatagoryBtnId(category))
     buttonContainer.appendChild(div);
     
   });

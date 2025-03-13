@@ -21,21 +21,16 @@
 // ------------------------- Api Call Function -----------------------------
 // ----------------all card data API call function star ---------------
   const loadAllDataApi = async () => {
-
     try{
       const res = await fetch `https://openapi.programming-hero.com/api/peddy/pets`;
       const data = await res.json();
       displyAllData(data.pets);
     }catch(error){
       console.log("Error: " + error.message);
-    };
-
-
-
+    }
 };
 loadAllDataApi()
 // ----------------all card data API call function end ---------------
-
 
 // .....................................dynamic button api data call star -------------------------
 const loadCatagoryBtn = async () =>{
@@ -53,22 +48,32 @@ loadCatagoryBtn();
 // ------------------------------------ dynamic button catagory call function star ----------------------
 
 const loadCatagoryBtnId = async (catagoryDetails) =>{
-  
- try{
-  const respon = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${catagoryDetails}`);
-  const data = await respon.json();{
-    reoveClassBtn()
-    const activeBtn = document.getElementById(`btn-${catagoryDetails}`);
-    activeBtn.classList.add("active")
-  //  for (const btnActives of activeBtn) {
-  //   console.log(btnActives)
-  //  }
-    displyAllData(data?.data);
+  // right grid layout image gulo gaybul how kora dilam  id dey dora
+   document.querySelector("#right-side-grid").innerHTML = "";
+  const spinner = document.getElementById("load-spinner"); // স্পিনার ধরছি
+  const cardContainer = document.querySelector("#petCard-container");
+  cardContainer.innerHTML =" "
+  spinner.classList.remove("hidden"); // স্পিনার শো করানো
+  setTimeout(async()=>{
+    try{
+      const respon = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${catagoryDetails}`);
+      const data = await respon.json();{
+        reoveClassBtn()
+        const activeBtn = document.getElementById(`btn-${catagoryDetails}`);
+        activeBtn.classList.add("active")
+        displyAllData(data?.data);
+      }
+     }catch(error){
+      console.log("Error: " + error.message);
+     }finally {
+      spinner.classList.add("hidden"); // স্পিনার বন্ধ করে দেওয়া
   }
- }catch(error){
-  console.log("Error: " + error.message);
- };
+  }, 2000);
 };
+
+// ----------------------------------- load spinner----------------------
+
+ 
 // ------------------------------------ dynamic button catagory call function end ----------------------
 
 //------------------------------------ dynamic pet id function call star----------------------------------
@@ -83,3 +88,9 @@ const loadPetIdFunction = async (petId)=>{
   console.log("Error: " + error.message);
  };
 };
+//------------------------------------ dynamic pet id function call end----------------------------------
+
+
+// ------------------------------------  load spiner functon----------------------------------------------
+
+
