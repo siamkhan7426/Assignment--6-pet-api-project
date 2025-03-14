@@ -45,4 +45,5 @@
 These ES6 features enhance code readability, maintainability, and efficiency in the **Paddy - Pet Adoption** project! 🚀🐾
 
 <!-- live link project -->
+* Live link to the deployed project.
 https://pets-adpot.netlify.app/
