@@ -19,16 +19,20 @@
    
 
 // ------------------------- Api Call Function -----------------------------
+
+// Global variable 
+let allPetsData = [];
+let filteredPetsData = [];
 // -------------------------sort function -------------------
+
+// -------------------------Sort Function (Descending by price) -------------------
 
 const sortByPriceDescnding = (allPets)=>{
 
   return allPets.sort((a, b)=> b.price - a.price);
   
 };
-let allPetsData = [];
-
-// -------------------------sort function -------------------
+// -------------------------Sort Function (Descending by price) end -------------------
 // ----------------all card data API call function star ---------------
   const loadAllDataApi = async () => {
     try{
@@ -42,19 +46,32 @@ let allPetsData = [];
       console.log("Error: " + error.message);
     }
 };
-   // sort
+   // sort ----------function --------------------
+   const showSpinnerSort = ()=>{
+    const spinner = document.getElementById("load-spinner"); 
+    const cardContainer = document.querySelector("#petCard-container");
+    spinner.classList.remove("hidden"); 
+    cardContainer.classList.add("hidden"); 
+    setTimeout(()=>{
+      const sortedPets = sortByPriceDescnding([...allPetsData]);
+      displyAllData(sortedPets)
+      spinner.classList.add("hidden"); 
+      cardContainer.classList.remove("hidden"); 
+    },2000)
+   }
   document.getElementById("sort-btn").addEventListener("click", ()=>{
-    const sortedPets = sortByPriceDescnding([...allPetsData]);
-    console.log(sortedPets)
-    displyAllData(sortedPets)
+    showSpinnerSort()
+    
   });
  
    
 loadAllDataApi();
 
-
-
 // ----------------all card data API call function end ---------------
+
+// ----------------buton data sort by felterbuton data sort by felter------------
+// Category Button Click Handler
+
 
 // .....................................dynamic button api data call star -------------------------
 const loadCatagoryBtn = async () =>{
