@@ -89,7 +89,7 @@
         <!-- Best Deal & Sort Button -->
         <div class="flex flex-col lg:flex-row justify-between items-center py-4">
             <h3 class="text-xl font-semibold mb-3 lg:mb-0">Best Deal For You</h3>
-            <button class="btn btn-success text-white px-4 py-2 rounded-lg shadow">Sort by Price</button>
+            <button id="sort-btn" class="btn btn-success text-white px-4 py-2 rounded-lg shadow">Sort by Price</button>
         </div>
     </section>
       <!-- loading spinner star -->
@@ -101,7 +101,7 @@
     <span class="loading loading-infinity loading-xl"></span>
     </div>
     <!-- loading spinner end -->
-        <!-- Adoption Section end -->
+    <!-- Adoption Section end -->
     <!-- card -section star-->
     <section  class="w-11/12 mx-auto">
         <!-- pet card -->
@@ -119,13 +119,13 @@
                 </div>
             </div>
     </section>
+
     <!-- modal show star -->
     <!-- Open the modal using ID.showModal() method -->
     <button id="showModal" class="btn hidden " onclick="customModal.showModal()">open modal</button>
     <dialog  id="customModal" class="modal ">
-  <div class="modal-box">
+    <div class="modal-box">
     <div id="modal-container" class="space-y-4">
-
     </div>
     <div class="space-y-3">
       <form method="dialog">
@@ -136,7 +136,18 @@
   </div>
     </dialog>
     <!-- modal show end -->
-  
+     <!-- count down adopt section star-->
+        <!-- Modal Structure -->
+   <div  id="adoptionModal" class="hidden">
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50  ">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center w-80">
+            <h2 class="text-lg font-semibold">Congrates</h2>
+            <p>Adoption Process is start For your Pets</p>
+            <p id="countdownText" class="mt-2 text-lg font-bold text-gray-700">(3)</p>
+        </div>
+        </div>
+   </div>
+     <!-- count down adopt section end-->
     <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-4 py-12">

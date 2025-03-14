@@ -37,7 +37,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                         <hr>
                         <div class="flex flex-col lg:flex-row justify-end gap-2 mt-3">
                             <button id="likeBtn" class="like-btn border rounded-lg py-1 px-3 flex items-center hover:bg-gray-100">👍 Like</button>
-                            <button id="adoptBtn" class="border rounded-lg py-1 px-3 text-green-500 hover:bg-green-100">Adopt</button>
+                            <button id="adoptBtn" onclick="showAdoptionModal(this)" class="border rounded-lg py-1 px-3 text-green-500 hover:bg-green-100">Adopt</button>
                             <button id="detailsBtn" onclick ="loadPetIdFunction(${petId})" class="border rounded-lg py-1 px-3 text-blue-500 hover:bg-blue-100">Details</button>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ const dynamicPetBtDataShow = (petBtn)=>{
     
     `
     // button event add dynbamic vaba 
-    const button = div.querySelector("click", ()=>loadCatagoryBtnId(category))
+    const button = div.querySelector("click", ()=>loadCatagoryBtnId(category));
     buttonContainer.appendChild(div);
     
   });
