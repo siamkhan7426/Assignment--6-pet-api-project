@@ -19,17 +19,41 @@
    
 
 // ------------------------- Api Call Function -----------------------------
+// -------------------------sort function -------------------
+
+const sortByPriceDescnding = (allPets)=>{
+
+  return allPets.sort((a, b)=> b.price - a.price);
+  
+};
+let allPetsData = [];
+
+// -------------------------sort function -------------------
 // ----------------all card data API call function star ---------------
   const loadAllDataApi = async () => {
     try{
       const res = await fetch `https://openapi.programming-hero.com/api/peddy/pets`;
       const data = await res.json();
-      displyAllData(data.pets);
+      allPetsData = data.pets;
+      console.log(allPetsData)
+      // const sortPets = sortByPriceDescnding(data.pets)
+      displyAllData(allPetsData);
     }catch(error){
       console.log("Error: " + error.message);
     }
 };
-loadAllDataApi()
+   // sort
+  document.getElementById("sort-btn").addEventListener("click", ()=>{
+    const sortedPets = sortByPriceDescnding([...allPetsData]);
+    console.log(sortedPets)
+    displyAllData(sortedPets)
+  });
+ 
+   
+loadAllDataApi();
+
+
+
 // ----------------all card data API call function end ---------------
 
 // .....................................dynamic button api data call star -------------------------
@@ -93,7 +117,6 @@ const loadPetIdFunction = async (petId)=>{
 
 // Function to handle Adopt button click
 function showAdoptionModal(button) {
-  console.log(button)
   const modal = document.getElementById("adoptionModal");
   const countdownText = document.getElementById("countdownText");
 

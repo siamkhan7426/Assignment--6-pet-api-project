@@ -44,6 +44,8 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
         `;
     cardContainer.appendChild(div);
 
+ 
+
     // -----------dynamic vaba card button dora addEventListener () image show star--------------
     const likeButton = div.querySelector(".like-btn");
     likeButton.addEventListener("click", (event)=>{
